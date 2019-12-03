@@ -37,3 +37,5 @@ def register():
         return redirect(url_for('auth.login'))
     title = "Register Now"
     return render_template('auth/register.html',title=title, registration_form =form)
+
+    
