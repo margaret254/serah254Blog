@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+
+<!-- styles block -->
+
+{% block styles%}
+   {{super()}}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+<!-- Content block -->
+
+<section id="index">
+       
+    {% block content %}
+
+    <div class="container-fluid all">
+        <div class="row">
+            <h2>About Me</h2>
+            <div class="card">
+            <div class="col-md-6 abt">
+                <h3>Bio:</h3>
+                <p>My names are Margaret.W.Mwangi.Am currently a student at Moringa School,<br>
+                Studying for full stack web development.</p>
+            </div><div class="col-md-6 abt">
+                <h3>My Likes And Donts:</h3>
+                <p> Am an introvert by nature, thus loves indoors and coolness mostly. I love <br>
+                watching Movies,Comedy(mostly Locally) and cool music.<br> Well, my donts is <br>
+                dont like partying so much.
+                </p>
+            </div>
+            </div>
+            </div>
+    </div>
+    
+    {% endblock%}
+
+</section>
+
+
+

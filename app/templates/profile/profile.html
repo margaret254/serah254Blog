@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}">
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="container prof">
+    <div class="card">
+      <!-- displaying  Username-->
+        
+          <div class="card-header">
+              <h1 class="text-center">Blogs Posted</h1>    
+            <h1>  Hi; {{user.username| capitalize}} </h1>
+          </div>
+          <div class="card-title">
+            {% if user.profile_pic_path %}
+            <img src="{{url_for('static',filename=user.profile_pic_path)}}"c class="rounded-circle card-image-top img-fluid" alt="" class="img-thumbnail">
+            {%else%}
+            <p>You have no profile picture, Please upload one.</p>
+            {% endif %}
+
+            {% if user == current_user %}
+
+            <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post"
+              enctype="multipart/form-data">
+              <input type="file" name="photo" class="form-control sub" required>
+              <button type="submit">Submit</button>
+            </form>
+            {% endif %}
+          </div>
+          <div class="card-body">
+            <!--Displaying user bio-->
+            {% if user.bio %}
+            <p> {{user.bio}}</p>
+            {%else%}
+            <p> {{user.username| capitalize}} has no bio </p>
+            {% endif %}
+            
+            {% if user == current_user %}
+            <button><a class="bio" href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a></button>
+            {% endif %}
+
+          </div>
+        
+      
+
+      
+    </div>
+  </div>
+
+{% endblock %}

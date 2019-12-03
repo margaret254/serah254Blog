@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+
+ h3{
+     text-align: center;
+     font-family: 'Merienda One', cursive;
+     color:black;
+ }
+
+ p{
+     font-size:20px;
+     font-family: 'Courgette', cursive;
+ }
+
+ .page-heading{
+     text-align: center;
+ }
+
+ .all{
+   background-color: lightblue;
+    min-height: 80vh;
+    margin:80px;
+    border-radius: 28px;
+    background-repeat: no-repeat;
+ }
+
+ .abt{
+    min-height: 30vh;
+    min-width: 30vh;
+    border-radius: 28px;
+ }
+
+ .contact{
+    background-color: lightblue;
+    min-height: 80vh;
+    margin:80px;
+    border-radius: 28px;
+ }
+ .new{
+    font-family: 'Courgette', cursive;
+    color:black;
+    font-size:25px;
+    margin:40px;
+    text-align: center;
+    box-shadow: black 1px 1px;
+ }
+ .row{
+     margin:40px;
+ }
+
+ .navbar-brand{
+     text-align: center;
+ }
+
+ .navbar{
+     background-color: black;
+     padding:20px;
+     margin-top:5px;
+ }
+
+ h2{
+     text-align: center;
+     margin-bottom:40px;
+     margin-top:150px;
+     font-family: 'Carter One', cursive;
+     font-size:30px;
+     color:black
+ }
+ .text-light{
+     padding:20px;
+     font-size: 20px;
+ }
+
+ .sign{
+     margin-top:6px;
+ }
+
+ .login{
+    min-height: 100vh;
+    background-color:#5D737E;
+    font-family: 'Courgette', cursive;
+    font-size:20px;
+ }
+
+ .log{
+     margin-top: 5px;
+ }
+
+ .register{
+    min-height: 100vh;
+    background-color:#5D737E;
+    font-family: 'Courgette', cursive;
+    font-size:20px;
+ }
+
+ .comment{
+    min-height: 100vh;
+    background-color:#5D737E;
+    font-family: 'Courgette', cursive;
+    font-size:20px;
+ }
+
+ .view-comment{
+    min-height: 100vh;
+    background-color:#5D737E;
+    font-family: 'Courgette', cursive;
+    font-size:20px;
+ }
+
+ .col-md-6{
+     justify-content: right;
+ }

@@ -1,0 +1,33 @@
+<nav class="navbar">
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li>
+          <a class="text-light" href="/"><i class="fa fa-home "></i><strong>HOME</strong> </a>
+        </li>
+        <li>
+            <a class="text-light" href="{{ url_for('main.about')}}"><strong>About Me</strong> </a>
+        </li>
+        <li>
+            <a class="text-light" href="{{ url_for('main.contact')}}"><strong>Contact Me:</strong> </a>
+        </li>      
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+        
+        <li class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i class="fa fa-user"></i><strong class="ml-2">Welcome, {{current_user.username}}</strong> <b class="caret"></b></a>
+          <ul class="dropdown-menu bg-dark text-center">
+              
+              <li><a href="{{url_for('main.profile',uname=current_user.username)}} " class="text-light " ><i class="icon-envelope"></i><strong>Your profile</strong></a></li>
+              <li class="divider"></li>
+              <div class="dropdown-divider"></div>
+              <li><a href="{{url_for('auth.logout')}}" class="text-light "><i class="fa fa-sign-out mr-2"></i><strong>Logout</strong></a></li>
+          </ul>
+      </li>
+        {% else %}
+        <li><a href="{{url_for('auth.login')}}" class="text-light"><i class="fa fa-sign-in mr-2"></i><strong>Log In</strong></a></li>
+        {%endif%}
+      </ul>
+     
+    </div>
+  </nav>
