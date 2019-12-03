@@ -86,11 +86,11 @@ def update_post(blog_id):
     elif request.method == 'GET':
         blog.title.data = blog.title
         blog.content.data = blog.content
-    return render_template('new_blog.html', title='Update Blog', form=form)
+    return render_template('blog.html', title='Update Blog', form=form)
 
 @main.route("/blog/<int:blog_id>/delete", methods=['POST'])
 @login_required
-def delete_post(blog_id):
+def delete_blog(blog_id):
     blog = Blog.query.get_or_404(blog_id)
     if blog.user != current_user:
         abort(403)
@@ -115,7 +115,7 @@ def new_blog():
         blog = Blog(title=form.title.data,blog=form.content.data)
         db.session.add(blog)
         db.session.commit()
-        return redirect(url_for('main.all'))
+        return redirect(url_for('main.index'))
 
     return render_template('new_blog.html', new_blog_form= form)
 

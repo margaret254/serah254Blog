@@ -38,6 +38,28 @@
     margin:80px;
     border-radius: 28px;
  }
+ .login{
+    background-color: lightblue;
+    min-height: 80vh;
+    margin:80px;
+    border-radius: 28px;
+    font-family: 'Courgette', cursive;
+ }
+ .register{
+    background-color: lightblue;
+    min-height: 80vh;
+    margin:80px;
+    border-radius: 28px;
+    font-family: 'Courgette', cursive;
+ }
+
+ .new-blog{
+    background-color: lightblue;
+    min-height: 60vh;
+    margin:80px;
+    border-radius: 28px;
+    font-family: 'Courgette', cursive; 
+ }
  .new{
     font-family: 'Courgette', cursive;
     color:black;
@@ -77,23 +99,12 @@
      margin-top:6px;
  }
 
- .login{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
-    font-size:20px;
- }
-
+ 
  .log{
      margin-top: 5px;
  }
 
- .register{
-    min-height: 100vh;
-    background-color:#5D737E;
-    font-family: 'Courgette', cursive;
-    font-size:20px;
- }
+ 
 
  .comment{
     min-height: 100vh;

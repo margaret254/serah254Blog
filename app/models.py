@@ -76,6 +76,7 @@ class Blog(db.Model):
         '''
         '''
         db.session.delete()
+        db.session.commit()
 
 class Comment(db.Model):
 
